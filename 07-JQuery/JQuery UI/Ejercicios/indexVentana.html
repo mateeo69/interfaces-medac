@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title id="firstTitle">Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <!--Ejercicio21-->
+    <!-- <script>
+        $(window).on("resize", () => {console.log("Redimensión");}
+        );
+    </script> -->
+    <!--Ejercicio22-->
+    <!-- <script>
+        $(window).on("load", ()=>{
+            $("body").css("background-color", "blue");
+        });
+    </script> -->
+    <!--Ejercicio23-->
+    <!-- <script>
+        $(window).on("minimize", ()=>{
+            console.log("minimizada");
+            NOT DONE
+        });
+    </script> -->
+    <!--Ejercicio24-->
+    <!-- <div style="background-color: aqua;">holita</div>
+    <script>
+        $(document).ready(()=>{
+            $(window).on("resize", ()=>{
+                $("div").css("width", $(window).width());
+                $("div").css("height", $(window).height());
+            });
+        });
+    </script> -->
+    <!--Ejercicio25-->
+    <!-- <p>Tamaño de la ventana: </p>
+    <script>
+        $(document).ready(()=>{
+            $(window).on("resize", ()=>{
+                $("p").text(`Tamaño de la ventana: ancho= ${$(window).width()}, alto = ${$(window).height()}`);
+            });
+        });
+    </script> -->
+    <!--Ejercicio26-->
+    <!-- <script>
+        $(document).ready(()=>{
+            $(window).on("closed")
+            NOT DONE
+        });
+    </script> -->
+    <!--Ejercicio27-->
+    <!-- <div id="contenedor" style="height: 200vh; width: 200vh; text-align: center; background-color: aqua;">
+    </div>
+    <p>sa</p>
+    <script>
+        $(document).ready(()=>{
+            $(window).on("scroll", ()=>{
+                $("#contenedor").toggle();
+            });
+        });
+    </script> -->
+    <!--Ejercicio28-->
+    <!--Ejercicio29-->
+    <!-- <div id="hola" style="background-color: antiquewhite; width: 10vh; height: 10vh;"></div>
+    <script>
+        $(document).ready(()=>{
+            let width = $("#hola").width();
+            let height = $("#hola").height();
+            
+            $(window).on("resize", ()=>{
+                width+=1;
+                height+=1;
+                $("#hola").css("width", `${width}px`);
+                $("#hola").css("height", `${height}px`);
+            });
+        });
+    </script> -->
+    <!--Ejercicio30-->
+    <!-- <script>
+        $(document).ready(()=>{
+            $(window).on("resize", ()=>{
+                console.log(parseInt(($(window).width())));
+                
+                if(parseInt($(window).width()) == "547" && parseInt($(window).height()) == "918"){
+                    alert("illo");
+                }
+            });
+        });
+    </script> -->
+</body>
+</html>

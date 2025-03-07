@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title id="firstTitle">Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+	<!--Ejercicio 11-->
+	<!-- <div id="area">Que pasa nen</div>
+	<script>
+		$(document).ready(()=>{
+			$("#area").on("mouseover", ()=>{
+				console.log("hola");
+				$("#area").css("background-color", "red");
+			});
+		}); 
+	</script>
+	-->
+	<!--Ejercicio12-->
+	<!-- <button>No cliques</button>
+	<script>
+		$(document).ready(()=>{
+			$("button").on("click", ()=>{
+				$("button").text("Clicado");
+			});
+		});
+	</script> -->
+	<!--Ejercicio13-->
+	<!-- <div id="contenedor" style="
+										width: 100%; 
+										height: 50vh; 
+										background-color: aqua;"
+										>d</div>
+	<script>
+		$(document).ready(()=>{
+			$("#contenedor").on("mousemove", (event)=>{
+				$("#contenedor").text("Coordenada x: "+event.clientX+" Coordenada y: "+event.clientY);
+			});
+		});
+	</script> -->
+	<!--Ejercicio14-->
+	<!-- <p class="item" style="background-color: aqua;
+													width: 20vh;
+													height: 20vh;">Killo que soy un P</p>
+	<script>
+		$(document).ready(()=>{
+			let width = 20;
+			let height = 20;
+			$(".item").on("mousemove", ()=>{
+				width++;
+				height++;
+				$(".item").css("width", width+"vh");
+				$(".item").css("height", height+"vh");
+			});
+		});
+	</script> -->
+	<!--Ejercicio15-->
+	<!-- <div id="principal" style="width: 20vh; height: 20vh;"></div>
+	<script>
+		$(document).ready(()=>{
+			$("#principal").css("background-color", "black");
+			$("#principal").on("mouseenter", ()=>{
+				$("#principal").css("background-color", "red");
+			});
+			$("#principal").on("mouseleave", ()=>{
+				$("#principal").css("background-color", "black");
+			});
+		});
+	</script> -->
+	<!--Ejercicio16-->
+	<!-- <div id="panecito" style="width: 10vh; height: 10vh;"></div>
+	<script>
+	$(document).ready(()=>{
+		$("#panecito").css("background-color", "red");
+		$("#panecito").on("mousedown", (event)=>{
+			if(event.button == 2) alert("click derecho pulsado");
+		});
+	});
+	</script> -->
+	<!--Ejercicio17-->
+	<!-- <div id="area" style="width: 50vh; height: 50vh; background-color: aqua;">
+		<img src="https://www.sbdapparel.es/images/2022/11/16/sbd-spain-classic.jpg" alt="" id="foto">
+	</div>
+	<script>
+		$(document).ready(()=>{
+			$("#area").on("mousemove", (event)=>{
+				let offset = $("#foto").offset();
+				let centerX = offset.top;
+				let centerY = offset.left;
+
+				let positionX = event.pageX - offset.top /2;
+				let positionY = event.pageY - offset.left /2;
+				$("#foto").attr("style", "top: "+positionX+"px; left: "+positionY+"px; position: absolute;");
+			});
+		});
+	</script> -->
+	<!--Ejercicio18-->
+	<!-- <p>Hola</p>
+	<script>
+		$(document).ready(()=>{
+			$("p").on("dblclick", ()=>{
+				$("p").text("alhamdulillah");
+			});
+		});
+	</script> -->
+	<!--Ejercicio19-->
+	
+</body>
+</html>

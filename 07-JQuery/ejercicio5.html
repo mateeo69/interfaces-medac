@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type ="text/javascript">
+        //Tengo del 1-4 items y quiero añadir un item5 e item0.
+        //Luego seleccionar el primero y el ultimo y borrarlos.
+        //Creamos item 6 y le añadimos el color rojo con .css
+        $(document).ready(function(){
+            $("input[value='añadir 0 y 5']").on("click", function(){
+                $(".lista").append("<li>item5</li>");
+                $(".lista").prepend("<li>item0</li>");
+            });
+            $("input[value='borrar 0 y 5']").on("click", function(){
+                $("ul li:first").detach();
+                $("ul li:last").remove();
+            });
+            $("input[value='añadir 6']").on("click", function(){
+                $(".lista").append("<li>item6</li>");
+                $("ul li:last").css("color", "red");
+            });
+            //Si quisieramos acceder a un elemento concreto del array, en este caso
+            //por ejemplo .lista, podríamos utilizar $(".lista").eq(0) accediendo así
+            //al elemento 0 de la lista.
+        });
+        
+    </script>
+</head>
+<body>
+    <ul class="lista">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+    <input type="button" value="añadir 0 y 5">
+    <input type="button" value="borrar 0 y 5">
+    <input type="button" value="añadir 6">
+</body>
+</html>

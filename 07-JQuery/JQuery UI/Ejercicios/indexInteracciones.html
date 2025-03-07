@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <style>
+        #div1, #div{ 
+            width: 100px; 
+            height: 100px; 
+            padding: 0.5em; 
+            float: left; 
+            margin: 10px 10px 10px 0; 
+            background-color: grey;
+            border: 1px solid black;
+        }
+        #div2, #draggableArea { 
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            margin: 10px; 
+            float: right;
+            background-color: gray;
+            border: 1px solid black;
+        }
+        #div1 p{
+            text-align: center; 
+            margin: 0
+        }
+        #feedback { font-size: 1.4em; }
+        #list .ui-selecting { background: #FECA40; }
+        #list .ui-selected { background: #F39814; color: white; }
+        #list { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #list li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+  </style>
+    </style>
+</head>
+
+<body>
+    <!--Ejercicio21-->
+    <!-- <div id="div1">Drag me</div>
+    <div id="div2"><p>Drop Here</p></div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").draggable();
+                $("#div2").droppable({
+                    drop: function(event, ui){
+                        $(this).css("background-color", "red").find("p").html("Dropped!");
+                    }
+                })
+            });
+        });
+    </script> -->
+    <!--Ejercicio22-->
+    <!-- <div id="div1"><p>Resize me</p></div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").resizable();
+            });
+        });
+    </script> -->
+    <!--Ejercicio23-->
+    <!-- <div id="div1"><p>Resize me</p></div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").resizable({
+                    handles: "e"
+                });
+            });
+        });
+    </script> -->
+    <!--Ejercicio24-->
+    <!-- <div id="div1"><p>Resize me</p></div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").resizable({
+                    handles: "s"
+                });
+            });
+        });
+    </script> -->
+    <!--Ejercicio25-->
+    <!-- <ol id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ol>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#list").selectable();
+            });
+        });
+    </script> -->
+    <!--Ejercicio26-->
+    <!-- <div id="div1"><p>Resize me</p></div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").resizable();
+                $("#div1").draggable();
+            });
+        });
+    </script> -->
+    <!--Ejercicio27-->
+    <!-- <div id="draggableArea">
+        <div id="div"></div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#draggableArea").find("#div").draggable();
+                $(document).on("mousedown", function(){
+                    if($("#draggableArea").find("#div").length == 1){
+                        $("#div").draggable({
+                            cancel: "#div"
+                        })
+                    }
+                });
+            });
+        })
+    </script> -->
+    <!--Ejercicio28-->
+    <!-- <div id="div1">Drag me</div>
+    <div id="div2"><p>Drop Here</p></div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").draggable();
+                $("#div2").droppable({
+                    drop: function(event, ui){
+                        $(this).css("background-color", "red").find("p").html("Dropped!");
+                    }
+                })
+            });
+        });
+    </script> -->
+    <!--Ejercicio29-->
+     <!-- <div id="div1">Drag me</div>
+    <div id="div2"><p>Drop Here</p></div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").draggable();
+                $("#div2").droppable({
+                    drop: function(event, ui){
+                        $(this).css("background-color", "red").find("p").html("Dropped!");
+                    }
+                })
+            });
+        });
+    </script> -->
+    <!--Ejercicio30-->
+    <div id="div1">Click to move me</div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#div1").draggable({
+                    drag: function( event, ui) {
+                        ui.position.left = 100;
+                        ui.position.top = 100;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

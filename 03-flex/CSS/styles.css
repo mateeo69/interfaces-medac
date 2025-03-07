@@ -1,0 +1,78 @@
+
+/* reseteo estilos */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana,Tahoma, sans-serif;
+}
+
+.container{
+    border: 1px solid black;
+}
+.container__title, .container__subtitle{
+    text-align: center;
+    margin: 10px;  
+    padding: 10px;
+}
+.container__subtitle{
+   border-bottom: 1px solid black; 
+}
+.container__layout{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* float: right; */
+    /* este display con flex-direction row es equivalente a Float Left */
+    /* flex-flow: row wrap;  */
+    /* equivalente flex-direction: row flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    /* align-items: flex-start; */
+    align-self: auto;
+    width: 100%;
+    height: 700px;
+    border: 2px solid green;
+}
+.layout__box{
+    /* float: left; */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 5px;
+    width: 20.5%;
+    flex-grow: 1;
+    /* flex-basis: calc((100%/4));
+    align-self: center; */
+}
+.layout__box--red{
+    background-color: red;
+    /* flex-grow: 1; */
+    order: 2;
+    /* flex-basis: 50%; */
+    /* flex-basis: calc((100% /4 ) + 100px);
+    align-self: self-end; */
+}
+.layout__box--green{
+    background-color: green;
+    order: 4;
+}
+.layout__box--yellow{
+    background-color: yellow;
+    order: 1;
+}
+.layout__box--blue{
+    background-color: blue;
+    order: 3;
+}
+.layout__box--cyan{
+    background-color: cyan;
+    order: 6;
+}
+.layout__box--orange{
+    background-color: orange;
+    order: 5;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <!-- 
+        1-Haz que un <div> con clase .cuadro se desvanezca (fade) cuando se haga clic en un
+        botón con id #fadeButton.
+        2-Crea un efecto de deslizamiento (slideUp) para un <p> cuando el usuario haga clic
+        en un botón.
+        3-Haz que un elemento con clase .oculto se muestre con una animación (fadeIn)
+        cuando se haga clic en un botón.
+        4-Aplica un efecto de desvanecimiento al pasar el ratón sobre una imagen.
+        5-Haz que un <div> con clase .animado se deslice hacia abajo (slideDown) al hacer
+        clic en un botón con id #slideButton.
+        6-Haz que el color de fondo de un <div> cambie de manera animada cuando se pase el
+        ratón sobre él.
+        7-Usa un efecto de desvanecimiento para mostrar y ocultar un <div> al hacer clic en
+        un botón.
+        8-Haz que un texto se deslice de izquierda a derecha usando show() y hide().
+        9-Usa el método toggle() para alternar la visibilidad de un elemento al hacer clic.
+        10-Haz que un <div> se desplace suavemente a una posición específica en la página. 
+    -->
+        <!--Ejercicio 1-->
+        <!-- <div class="cuadro">
+            Esto es un cuadro
+        </div>
+        <button id="fadeButton">Pulsa</button>
+        <script>
+            $(document).ready(function(){
+                $("#fadeButton").on("click", function(){
+                    $(".cuadro").fadeOut();
+                });
+            });
+        </script> -->
+
+        <!--Ejercicio2-->
+        <!-- <p>Esto va a deslizar</p>
+        <button>Desliza</button>
+        <script>
+            $(document).ready(function(){
+                $("button").on("click", function(){
+                    $("p").slideUp(200);
+                });
+            });
+        </script> -->
+
+        <!--Ejercicio3-->
+        <!-- <div class="cuadro">
+            Esto es un cuadro
+        </div>
+        <button id="fadeOut">Pulsa para ocultar</button>
+        <button id="fadeIn">Pulsa para mostrar</button>
+        <script>
+            $(document).ready(function(){
+                $("#fadeOut").on("click", function(){
+                    $(".cuadro").addClass("oculto");
+                    $(".cuadro").fadeOut();
+                });
+                $("#fadeIn").on("click", function(){
+                    $(".oculto").fadeIn();
+                })
+            });
+        </script> -->
+        <!-- Ejercicio4 -->
+         <!-- <img src="animanga-0_341258.jpg" alt="">
+         <script>
+            $(document).ready(function(){
+                $("img").on("mouseover", function(){
+                    $(this).fadeOut();
+                });
+            });
+         </script> -->
+        <!--Ejercicio5-->
+        <!-- <div class="animado">Me voy abajo</div>
+        <button id="slideButton">Ir abajo</button>
+        <button id="slideUpButton">Ir arriba</button>
+        <script>
+            $(document).ready(function(){
+                $("#slideUpButton").on("click", function(){
+                    $(".animado").slideUp(200);
+                });
+                $("#slideButton").on("click", function(){
+                    $(".animado").slideDown(200);
+                });
+            });
+        </script> -->
+        <!--Ejercicio6-->
+        <!-- <div class="background" width="500px">hola <br><br><br></div>
+        
+        <script>
+            $(document).ready(function(){
+                $(".background").on("mouseover", function(){
+                    $(this).animate({
+                        backgroundColor: "rgb(20, 20, 20)",
+                    }, 2000)
+                    $(this).animate({
+                        backgroundColor: "rgb(250, 150, 40)",
+                    }, 2000)
+                });
+            });
+        </script> -->
+        <!-- Ejercicio7-->
+        <!-- <div class="cuadro">
+            Esto es un cuadro
+        </div>
+        <button id="fadeToggle">Pulsa</button>
+        <script>
+            $(document).ready(function(){
+                $("#fadeToggle").on("click", function(){
+                    $(".cuadro").fadeToggle();
+                });
+            });
+        </script> -->
+        <!--Ejercicio8-->
+        <!-- <p>Texto</p>
+        <button id="showButton">show</button>
+        <button id="hideButton">hide</button>
+        <script>
+            $(document).ready(function(){
+                $("#hideButton").on("click", function(){
+                    $("p").hide("slide",{direction: "right"}, "slow");
+                });
+                $("#showButton").on("click", function(){
+                    $("p").show("slide",{direction: "right"}, "slow");
+                });
+            });
+        </script> -->
+        <!--Ejercicio9-->
+        <!-- <div class="cuadro">
+            Esto es un cuadro
+        </div>
+        <button id="fadeToggle">Pulsa</button>
+        <script>
+            $(document).ready(function(){
+                $("#fadeToggle").on("click", function(){
+                    $(".cuadro").fadeToggle();
+                });
+            });
+        </script> -->
+        <!--Ejercicio10-->
+        <p>Hola</p>
+        <button>Muévete</button>
+</body> 
+</html>

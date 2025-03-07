@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div").on("click", function () {
+                $("div").each(function () {
+                    alert($(this).text());
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="divs">1</div>
+    <div class="divs">2</div>
+    <div class="divs">3</div>
+    <div class="divs">4</div>
+    <input type="button" value="pulsa">
+</body>
+
+</html>

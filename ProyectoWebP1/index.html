@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Proyecto Web</title>
+  <link rel="shortcut icon" href="img/moneda.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/reset_estilos.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- Inicio Cabecera -->
+  <header class="header">
+    <div class="header__wrap">
+      <div class="header__logo">
+        <img src="img/moneda.png" class="logo__moneda"></img>
+        <h3>GAMES</h3>
+      </div>
+      <nav class="header__menu">
+        <ul class="menu__list">
+          <li class="list__item"><a href="#">INICIO</a></li>
+          <li class="list__item"><a href="#">TIENDA</a></li>
+          <li class="list__item"><a href="#">PERFIL</a></li>
+          <li class="list__item"><a href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- fin de la Cabecera -->
+
+  <main class="content__wrap">
+    <section class="content__info">
+      <!-- Inicio Banner -->
+      <div class="content__banner">
+        <h1>WELCOME!</h1>
+      </div>
+      <!-- fin de Banner -->
+      <!-- Inicio Tarjetas -->
+      <div class="content__cards">
+        <div class="cards__card">
+          <div class="card__box">
+            <img src="img/action.png" class="card__icon">
+          </div>
+          <h2 class="card__category">Acción</h2>
+          <p class="card__description">
+            Aprende los principales lenguajes para desarrollar webs.
+            !Conviértete en Web Master!
+          </p>
+        </div>
+        <div class="cards__card">
+          <div class="card__box">
+            <img src="img/strategy.png" class="card__icon">
+          </div>
+          <h2 class="card__category">Estrategia</h2>
+          <p class="card__description">
+            Aprende los principales lenguajes para desarrollar webs.
+            !Conviértete en Web Master!
+          </p>
+        </div>
+        <div class="cards__card">
+          <div class="card__box">
+            <img src="img/dados.png" class="card__icon">
+          </div>
+          <h2 class="card__category">Rol</h2>
+          <p class="card__description">
+            Aprende los principales lenguajes para desarrollar webs.
+            !Conviértete en Web Master!
+          </p>
+        </div>
+        <div class="cards__card">
+          <div class="card__box">
+            <img src="img/adventure.png" class="card__icon">
+          </div>
+          <h2 class="card__category">Aventura</h2>
+          <p class="card__description">
+            Aprende los principales lenguajes para desarrollar webs.
+            !Conviértete en Web Master!
+          </p>
+        </div>
+      </div>
+      <!-- fin de Tarjetas -->
+    </section>
+
+    <div class="content__principal">
+      <!-- Inicio de Barra Lateral -->
+      <aside class="principal__lateral">
+        <h3 class="lateral__title">LOGIN</h3>
+        <div class="lateral__login aside-box">
+          <form>
+            <div class="login__inputs">
+              <input type="email" placeholder="Email"/>
+              <input type="password" placeholder="Contraseña"/>
+              <div class="login__buttons">
+                <input type="submit" value="Entrar" />
+                <input type="reset" value="Limpiar" />
+              </div>
+            </div>
+            <a href="#">Regístrate aquí</a>
+            <a href="#">Has olvidado tu contraseña?</a>
+          </form>
+        </div>
+        <h3 class="lateral__title">REDES SOCIALES</h3>
+        <div class="lateral__social aside-box">
+          <div class="social__twitter">
+            <a href="#" class="social__icon">t</a>
+            <p class="social__overlay">Twitter</p>
+          </div>
+          <div class="social__facebook">
+            <a href="#" class="social__icon">f</a>
+            <p class="social__overlay">Facebook</p>
+          </div>
+          <div class="social__youtube">
+            <a href="#" class="social__icon">y</a>
+            <p class="social__overlay">Youtube</p>
+          </div>
+        </div>
+        <h3 class="lateral__title">PATROCINADORES</h3>
+        <div class="lateral__sponsors aside-box">
+          <img src="./img/steam.png" alt="steam">
+          <img src="./img/heretics.avif" alt="heretics">
+          <img src="./img/asus.png" alt="asus">
+        </div>
+      </aside>
+      <!-- Inicio de los Artículos -->
+      <section class="principal__articles">
+        <h2 class="articles__title">Juegos disponibles</h2>
+        <form class="articles__search">
+          <input type="text" placeholder="Buscar...">
+          <input type="button" value="L" class="search__icon"/>
+        </form>
+        <div class="articles__box2">
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Acción</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">Hitman</a>
+              </h4>
+              <img src="./img/hitman.jpg" alt="">
+              <p>
+                Hitman es un juego de sigilo donde controlas al Agente 47,
+                un asesino profesional, usando estrategias creativas para eliminar
+                objetivos en escenarios abiertos sin ser descubierto.
+              </p>
+              <strong>20,25€</strong>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Acción</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">Cyberpunk 2077</a>
+              </h4>
+              <img src="./img/cyberpunk.jpeg" alt="">
+              <p>
+                Un juego de rol y acción en un mundo abierto futurista donde 
+                tomas decisiones que afectan la historia mientras exploras la 
+                ciudad de Night City.
+              </p>
+              <strong>29,65€</strong>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Estrategia</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">World Of Tanks Blitz</a>
+              </h4>
+              <img src="./img/world-of-tanks.jpg" alt="">
+              <p>
+                Un juego multijugador en línea donde controlas tanques 
+                y luchas en batallas estratégicas por equipos.
+              </p>
+              <strong>5,94€</strong>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Estrategia</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">Total War: WARHAMMER III</a>
+              </h4>
+              <img src="./img/total-war.jpg" alt="">
+              <p>
+                Un juego de estrategia masiva con batallas épicas 
+                en un universo de fantasía, combinando táctica en tiempo real y 
+                gestión por turnos.
+              </p>
+              <strong>59,99€</strong>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Rol</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">The Witcher 3: Wild Hunt</a>
+              </h4>
+              <img src="./img/the-witcher.jpg" alt="">
+              <p>
+                Un juego de rol de mundo abierto donde eres Geralt, un cazador de 
+                monstruos, buscando a tu hija adoptiva en un mundo lleno de 
+                misiones y criaturas.
+              </p>
+              <strong>35,85€</strong>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Rol</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">Diablo® IV</a>
+              </h4>
+              <img src="./img/diablo.avif" alt="">
+              <p>
+                Un juego de rol de acción oscuro y brutal donde exploras un mundo abierto,
+                 luchando contra demonios y mejorando tus habilidades.
+              </p>
+              <strong>40,67€</strong>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Aventura</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">The Lord of the Rings: Return to Moria™</a>
+              </h4>
+              <img src="./img/lord-of-the-rings.png" alt="">
+              <p>
+                Un juego de supervivencia en la Tierra Media, donde exploras y 
+                reconstruyes Moria con tus compañeros en busca de tesoros.
+              </p>
+              <strong>16,45€</strong>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__datos">
+              <span>Categoría: Aventura</span>
+            </div>
+            <div class="article__content">
+              <h4 class="article__subtitle">
+                <a href="#">Black desert: Traveler edition</a>
+              </h4>
+              <img src="./img/black-desert.avif" alt="">
+              <p>
+                Un juego de rol y aventura multijugador en línea con un mundo visualmente 
+                impresionante y un sistema de combate en tiempo real muy dinámico.
+              </p>
+              <strong>10,25€</strong>
+            </div>
+          </article>
+        </div>
+        <section class="content__nosotros">
+          <h2 class="articles__title">¿Quiénes somos?</h2>
+          <div class="articles__box3">
+            <article class="articles__article">
+              <div class="article__content">
+                <h4 class="article__subtitle">
+                  <a href="#">Miguel Ángel Molina</a>
+                </h4>
+                <img src="./img/henry-cavill.jpg" alt="">
+                <p>
+                  Un joven emprendedor de 23 años, nacido en Málaga, apasionado por los videojuegos 
+                  y la tecnología. Tiene una energía creativa y un espíritu decidido, 
+                  dedicando su tiempo a ofrecer experiencias únicas a los clientes de su 
+                  tienda de videojuegos.
+                </p>
+              </div>
+            </article>
+            <article class="articles__article">
+              <div class="article__content">
+                <h4 class="article__subtitle">
+                  <a href="#">Adrián Puertas Sánchez</a>
+                </h4>
+                <img src="./img/jason-statham.jpg" alt="">
+                <p>
+                  Un entusiasta de 19 años de Mallorca, amante de los videojuegos y la innovación. 
+                  A pesar de su juventud, aporta frescura e ideas modernas al negocio, 
+                  trabajando en equipo para hacer que la tienda sea un espacio atractivo y 
+                  vibrante para los gamers.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+      <!-- fin de los Artículos -->
+    </div>
+    
+  </main>
+  <!-- Inicio de Pié de Página -->
+  <footer class="content__footer">
+    <div class="footer__wrap">
+      <div class="footer__menuFooter">
+        <h5 class="footer__title">MENÚ</h5>
+        <ul class="footer__list">
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">TIENDA</a></li>
+          <li><a href="#">PERFIL</a></li>
+          <li><a href="#">CONTACTO</a></li>
+        </ul>
+      </div>
+      <div class="footer__location">
+        <h5 class="footer__title">¿DÓNDE ESTAMOS?</h5>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2996623515555!2d-4.462811723546774!3d36.69133637227841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20%F0%9F%A5%87%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1698701252334!5m2!1ses!2ses"
+          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="footer__info">
+        <h5 class="footer__title">Desarrollado con</h5>
+        <p class="footer__design">
+          <img src="img/html-css.png" alt="Creado con HTML y CSS" />
+        </p>
+        <h5 class="footer__title">Optimizado para</h5>
+        <p class="footer__browsers">
+          <a href="#">
+            <img src="img/firefox-icon.png" alt="Firefox" />
+          </a>
+          <a href="#">
+            <img src="img/chrome.png" alt="Chrome" />
+          </a>
+          <a href="#">
+            <img src="img/safari.png" alt="Safari" />
+          </a>
+          <a href="#">
+            <img src="img/android.png" alt="Android" />
+          </a>
+          <a href="#">
+            <img src="img/Opera_256x256.png" alt="Opera" />
+          </a>
+        </p>
+        <h5 class="footer__title">AUTOR</h5>
+        <p class="footer__author">&copy; Miguel Ángel Molina - WEB</p>
+      </div>
+    </div>
+  </footer>
+  <!-- fin de Pié de Página -->
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+
+<body>
+    <!-- 
+        11-Crea un diálogo con un mensaje de bienvenida usando el widget dialog de jQuery UI.
+        12-Haz que un <input> se transforme en un campo de fecha 
+        utilizando el widget datepicker.
+        13-Aplica un tooltip a un elemento con el texto "Haz clic aquí".
+        14-Convierte un menú de lista <ul> en un menú desplegable utilizando menu.
+        15-Convierte una lista de elementos en una lista interactiva de ordenación
+        utilizando el widget sortable.
+        16-Convierte un <input> en un campo numérico con el widget spinner.
+        17-Usa el widget progressbar para mostrar el progreso de una acción (por ejemplo,
+        una carga de archivo).
+        18-Usa el widget autocomplete para sugerir opciones mientras el usuario escribe en
+        un campo de texto.
+        19-Crea un cuadro de selección múltiple usando selectmenu.
+        20- Aplica un accordion a una lista de elementos <h3> y <div>. 
+    -->
+    <!-- Ejercicio11 -->
+    <!-- <div id="dialog" title="Dialog Title">I'm a dialog</div>
+        <button id="dialogButton">Click</button>
+        <script>
+            $( "#dialog" ).dialog({ autoOpen: false });
+            $("#dialogButton").on("click", function(){
+                $( "#dialog" ).dialog( "open" );
+            });
+        </script> -->
+    <!--Ejercicio12-->
+    <!-- <input type="text" id="datePicker">
+        <button class="transform">Click to transform</button>
+        <script>
+            $( function() {
+                $(".transform").on("click", function(){
+                    $( "#datePicker" ).datepicker();
+                });
+            });
+        </script> -->
+    <!--Ejercicio13-->
+    <!-- <p id="parrafo" title="Alhamdulillah">Haz click aquí</p>
+        <p title="hola">Hola</p>
+        <script>
+            $(document).ready(function(){
+                $(function(){
+                    $("#parrafo").tooltip();
+                });
+            }); 
+        </script> -->
+    <!--Ejercicio14-->
+    <!-- <ul id="menu">
+            <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+            <li><div>Books</div></li>
+            <li><div>Clothing</div></li>
+            <li><div>Electronics</div>
+              <ul>
+                <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                <li><div>Car Hifi</div></li>
+                <li><div>Utilities</div></li>
+              </ul>
+            </li>
+            <li><div>Movies</div></li>
+            <li><div>Music</div>
+              <ul>
+                <li><div>Rock</div>
+                  <ul>
+                    <li><div>Alternative</div></li>
+                    <li><div>Classic</div></li>
+                  </ul>
+                </li>
+                <li><div>Jazz</div>
+                  <ul>
+                    <li><div>Freejazz</div></li>
+                    <li><div>Big Band</div></li>
+                    <li><div>Modern</div></li>
+                  </ul>
+                </li>
+                <li><div>Pop</div></li>
+              </ul>
+            </li>
+            <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+          </ul>
+          <script>
+            $(document).ready(function(){
+                $(function(){
+                    $("#menu").menu()
+                });
+            });
+        </script> -->
+    <!--Ejercicio15-->
+    <!-- <ul id="lista">
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+            <li>Item6</li>
+        </ul>
+        <script>
+            $(document).ready(function(){
+                $(function(){
+                    $("#lista").sortable();
+                })
+            });
+        </script> -->
+    <!--Ejercicio16-->
+    <!-- <input type="text" class="input">
+        <script>
+            $(function(){
+                $(".input").spinner();
+            });
+        </script> -->
+    <!--Ejercicio17-->
+    <!-- <div id="dialog" title="Subida de archivo">
+        <div class="progress-label">Subiendo archivo...</div>
+        <div id="progressbar"></div>
+    </div>
+    <button id="downloadButton">Subir archivo</button>
+    <style>
+        #progressbar {
+            margin-top: 20px;
+        }
+
+        .progress-label {
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        .ui-dialog-titlebar-close {
+            display: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            var progressTimer,
+                progressbar = $("#progressbar"),
+                progressLabel = $(".progress-label"),
+                dialogButtons = [{
+                    text: "Cancelar subida",
+                    click: closeDownload
+                }],
+                dialog = $("#dialog").dialog({
+                    autoOpen: false,
+                    closeOnEscape: false,
+                    resizable: false,
+                    buttons: dialogButtons,
+                    open: function () {
+                        progressTimer = setTimeout(progress, 2000);
+                    },
+                    beforeClose: function () {
+                        downloadButton.button("option", {
+                            disabled: false,
+                            label: "Subir Archivo"
+                        });
+                    }
+                }),
+                downloadButton = $("#downloadButton")
+                    .button()
+                    .on("click", function () {
+                        $(this).button("option", {
+                            disabled: true,
+                            label: "Subiendo..."
+                        });
+                        dialog.dialog("open");
+                    });
+
+            progressbar.progressbar({
+                value: false,
+                change: function () {
+                    progressLabel.text("Current Progress: " + progressbar.progressbar("value") + "%");
+                },
+                complete: function () {
+                    progressLabel.text("Completado!");
+                    dialog.dialog("option", "buttons", [{
+                        text: "Close",
+                        click: closeDownload
+                    }]);
+                    $(".ui-dialog button").last().trigger("focus");
+                }
+            });
+
+            function progress() {
+                var val = progressbar.progressbar("value") || 0;
+
+                progressbar.progressbar("value", val + Math.floor(Math.random() * 3));
+
+                if (val <= 99) {
+                    progressTimer = setTimeout(progress, 50);
+                }
+            }
+
+            function closeDownload() {
+                clearTimeout(progressTimer);
+                dialog
+                    .dialog("option", "buttons", dialogButtons)
+                    .dialog("close");
+                progressbar.progressbar("value", false);
+                progressLabel
+                    .text("Subiendo archivo...");
+                downloadButton.trigger("focus");
+            }
+        });
+    </script> -->
+    <!--Ejercicio18-->
+    <!-- <div class="ui-widget">
+        <label for="names">Nombre:</label>
+        <input type="text" id="names">
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                const availableNames = [
+                    "Miguel Ángel",
+                    "Migue",
+                    "Juan Antonio",
+                    "Juan José",
+                    "Jose Juan",
+                    "Adrian",
+                    "Angel",
+                    "Estela",
+                    "Enya",
+                    "Luis",
+                    "Jaime", 
+                    "Paco"
+                ];
+                $("#names").autocomplete({
+                    source: availableNames
+                });
+            });
+        })
+    </script> -->
+    <!--Ejercicio19-->
+    <!-- <form action="#">
+        <fieldset>
+          <label for="personaje">Selecciona un personaje</label>
+          <select name="personaje" id="personaje">
+            <option>Phoenix</option>
+            <option>Chamber</option>
+            <option selected="selected">Iso</option>
+            <option>Omen</option>
+            <option>Reyna</option>
+          </select>
+        </fieldset>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#personaje").selectmenu();
+            });
+        });
+    </script> -->
+    <!--Ejercicio20-->
+    <!-- <div id="accordion">
+        <h3>section 1</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ipsam eum debitis laboriosam expedita cum odit similique iste, nesciunt ad aspernatur ex assumenda
+                aut officia. Eaque ex reiciendis voluptatibus iure recusandae?</p>
+        </div>
+        <h3>section 2</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ipsam eum debitis laboriosam expedita cum odit similique iste, nesciunt ad aspernatur ex assumenda
+                aut officia. Eaque ex reiciendis voluptatibus iure recusandae?</p>
+        </div>
+        <h3>section 3</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ipsam eum debitis laboriosam expedita cum odit similique iste, nesciunt ad aspernatur ex assumenda
+                aut officia. Eaque ex reiciendis voluptatibus iure recusandae?</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#accordion").accordion();
+            })
+        });
+    </script> -->
+</body>
+
+</html>

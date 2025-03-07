@@ -1,0 +1,5 @@
+.imagenes{
+	display: flex;
+	border: solid 3px black;
+	justify-content: center;
+}

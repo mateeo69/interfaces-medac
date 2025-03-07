@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        let $contador = 0;
+        $(document).ready(function () {
+            $("#cajaAuxiliar").scroll(function () {
+                $contador++;
+                //Con .text() le ponemos un nuevo valor al texto del elemento.
+                $("#numeroScroll").text("Scroll realizado:" + $contador);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="cajaAuxiliar" style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem molestias tempore obcaecati reiciendis alias animi dicta porro. Laboriosam odio ab eum animi culpa ea tempore earum repellendus consequatur soluta.
+    </div>
+    <div id="numeroScroll">
+        Scroll realizado: 0
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#input").keydown(function(event){
+                $("#tecla").text("Se ha pulsado la tecla: " + event.key);
+                //Con .val() accedemos al valor del input y le ponemos un valor
+                $("#input").val("");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" name="texto" id="input">
+    <p id="tecla">Se ha pulsado la tecla: </p>
+</body>
+</html>

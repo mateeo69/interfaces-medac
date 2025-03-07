@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title id="firstTitle">Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+	<!--Ejercicio1-->
+	<!-- <input type="text" id="input">
+	<script>
+		$(document).ready(()=>{
+			$("#input").on("keypress", (event)=>{
+				if(event.key == "Enter"){
+					console.log("Se ha pulsado Enter");
+				}
+			});
+		});
+	</script> -->
+	<!--Ejercicio2-->
+	<!-- <input type="text" id="inputTexto">
+	<script>
+		$(document).ready(()=>{
+			$("#inputTexto").on("keypress", (event)=>{
+					alert("Escribiendo...");
+			});
+		});
+	</script> -->
+	<!--Ejercicio3-->
+	<!-- <input type="text" id="input">
+	<script>
+		$(document).ready(()=>{
+			$("#input").on("keydown", (event)=>{
+				console.log(event.key);
+			});
+		});
+	</script> -->
+	<!--Ejercicio4-->
+	<!-- <input type="text" id="campo">
+	<script>
+		$(document).ready(()=>{
+			$("#campo").on("keydown", (event)=>{
+				if(event.key == "Escape"){
+					$("#campo").val("");
+				}
+			});
+		});
+	</script> -->
+	<!--Ejercicio5-->
+	<!-- <input type="text" id="campo">
+	<script>
+		$(document).ready(()=>{
+			$("#campo").on("keydown", (event)=>{
+				if(event.key == "Tab") {
+					$("#campo").css("background-color", "yellow");
+				}
+			});
+		});
+	</script> -->
+	<!--Ejercicio6-->
+	<!-- <input type="text" id="campo">
+	<input type="text" id="campo2">
+	<script>
+		$(document).ready(()=>{
+			$("#campo").on("keydown", (event)=>{
+				$("#campo2").val(event.key);
+			})
+		});
+	</script> -->
+	<!--Ejercicio7-->
+	<!-- <input type="text" id="email">
+	<script>
+		$(document).ready(()=>{
+			$("#email").on("keydown", ()=>{
+				let text = $("#email").val();
+				if(text.indexOf("@") != -1) alert("Hay @"); 
+			})
+		});
+	</script> -->
+	<!--Ejercicio8-->
+	<!-- <input type="text" id="busqueda">
+	<script>
+		$(document).ready(()=>{
+			$("#busqueda").on("keydown", ()=>{
+				console.log("Busqueda pressed");
+			})
+		});
+	</script> -->
+	<!--Ejercicio9-->
+	<!-- <input type="text" id="campo">
+	<p></p>
+	<script>
+		$(document).ready(()=>{
+			let characters = 10;
+			$("#campo").on("keydown", ()=>{
+				
+				if(characters >= 0){
+					characters--;
+					$("p").text(`Quedan ${characters} restantes.`);
+				}
+				if(characters == 0){
+					$("#campo").attr("disabled", "true");
+				}
+			});
+		});
+	</script> -->
+	<!--Ejercicio10-->
+	<!-- <p id="peo">LA MADRE QUE ME TRAJO</p>
+	<script>
+		$(document).ready(()=>{
+			$(document).on("keydown", (event)=>{
+				if(event.key == "Escape"){
+					$("#peo").css("background-color", "red");
+				}
+			});
+		});
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+.iterador{
+    font-size: 2em;
+    border: solid 2px red;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+.contIterador{
+    border: blue solid 10px;
+    width: 400px;
+}
+.warning{
+    background-color: aqua;
+}

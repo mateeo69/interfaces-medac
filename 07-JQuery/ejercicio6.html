@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // $(".botones").eq(0).on("click", function(){
+            //     $("#input").val($(".botones").eq(0).val()+"");
+            // });
+
+            // $(".botones").eq(1).on("click", function(){
+            //     $("#input").val($(".botones").eq(1).val()+"");
+            // });
+            
+            // $(".botones").eq(2).on("click", function(){
+            //     $("#input").val($(".botones").eq(2).val()+"");
+            // });
+
+            $("input").on("click", function(){
+                let text = $(this).val();
+                $("#input").val(text);
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="">Input</label>
+    <input type="text" id="input"> <br> <br>
+    <input type="button" value=1 class="botones"></input>
+    <input type="button" value=2 class="botones"></input>
+    <input type="button" value=3 class="botones"></input>
+</body>
+</html>

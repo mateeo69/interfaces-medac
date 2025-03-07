@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="firstTitle">Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+  </head>
+  <body>
+    <!--Ejercicio1-->
+    <!-- <p class="item">Hola</p>
+    <script>
+        $(document).ready(function(){
+            $(".item").on("click", function(){
+                $(this).html("Changed");
+            })
+        });
+    </script> -->
+    <!--Ejercicio2-->
+    <!-- <ol>
+        <li class="producto">Item 1</li>
+        <li class="producto">Item 2</li>
+        <li class="producto">Item 3</li>
+        <li class="producto">Item 4</li>
+        <li class="producto">Item 5</li>
+    </ol>
+    <script>
+        $(document).ready(function(){
+            $(".producto").on("click", function(){
+                $(this).css("background-color", "red");
+            });
+        });
+    </script> -->
+    <!--Ejercicio3-->
+    <!-- <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", function(){
+                $("div:first-child").html("Hola Mundo");
+            });
+        });
+    </script> -->
+    <!--Ejercicio4-->
+    <!-- <h1 id="titulo">Hola</h1>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", function(){
+                $("#titulo").css("background-color", "blue");
+            });
+        });
+    </script> -->
+    <!--Ejercicio5-->
+    <!-- <p>hola 1</p>
+    <p>hola 2</p>
+    <p>hola 3</p>
+    <p>hola 4</p>
+    <p>hola 5</p>
+    <p>hola 6</p>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", function(){
+                $("p").css("font-size", "18px");
+            });
+        });
+    </script> -->
+    <!--Ejercicio6-->
+    <!-- <ol id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", function(){
+                $("#lista").append("<li>Otro Item</li>");
+            });
+        });
+    </script> -->
+    <!--Ejercicio7-->
+    <!-- <p id="descripcion">Hola esto es la descripcion</p>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", function(){
+                let text = $("#descripcion").text();
+                console.log(text);
+            });
+        });
+    </script> -->
+    <!--Ejercicio8-->
+    <!-- <ol>
+        <li class="carta">Carta 1</li>
+        <li class="carta">Carta 2</li>
+        <li class="carta">Carta 3</li>
+        <li class="carta">Carta 4</li>
+    </ol>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", function(){
+                $(".carta").css("border", "1px solid green");
+            });
+        });
+    </script> -->
+    <!--Ejercicio9-->
+    <!-- <ol>
+        <li class="eliminar">Carta 1</li>
+        <li class="carta">Carta 2</li>
+        <li class="eliminar">Carta 3</li>
+        <li class="carta">Carta 4</li>
+    </ol>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", function(){
+                $(".eliminar").remove();
+            });
+        });
+    </script> -->
+    <!--Ejercicio10-->
+    <!-- <div id="contenedor">
+      <span>span 1 <br></span>
+      <span>span 2 <br></span>
+      <span>span 3 <br></span>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(this).on("click", ()=>{
+                $("#contenedor > span").css("background-color", "grey");
+            })
+        })
+    </script> -->
+    <!--Ejercicio11-->
+    <!-- <div class="foto">soy foto 1</div>
+    <div class="doto">soy foto 2</div>
+    <div class="foto">soy foto 3</div>
+    <div class="doto">soy foto 4</div>
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $(".foto").hide();
+            });
+        });
+    </script> -->
+    <!--Ejercicio12-->
+    <!-- <div>
+        <h1>hola 1</h1>
+        <h1>hola 2</h1>
+        <h1>hola 3</h1>
+    </div>
+    <script>
+        $(document).ready(() =>{
+            $(this).on("click", () => {
+                $("div > h1").css("border", "1px solid red");
+            });
+        });
+    </script> -->
+    <!--Ejercicio13-->
+    <!-- <input type="text">
+    <input type="text">
+    <input type="text">
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $("input").val("Texto predeterminado");
+            })
+        });
+    </script> -->
+    <!--Ejercicio14-->
+    <!-- <div>div 1</div>
+    <div>div 2</div>
+    <div>div 3</div>
+    <div>div 4</div>
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $("div:nth-child(2)").css("background-color", "yellow");
+            });
+        });
+    </script> -->
+    <!--Ejercicio15-->
+    <!-- <nav>
+        <a href="">a 1</a>
+        <a href="">a 2</a>
+        <a href="">a 3</a>
+        <a href="">a 4</a>
+        <a href="">a 5</a>
+        <a href="">a 6</a>
+    </nav>
+    <script>
+        $(document).ready(() =>{
+            console.log($("a").hasClass("activo"));
+            $(document).on("click", ()=>{
+                $("a").addClass("activo");
+                console.log($("a").hasClass("activo"));
+            });
+        });
+    </script> -->
+    <!--Ejercicio16-->
+    <!-- <script>
+        $(document).ready(()=>{
+            $("body").append("<p>Bienvenido</p>");
+        });
+    </script> -->
+    <!--Ejercicio17-->
+    <!-- <img 
+        src="https://i0.wp.com/streetliftingacademy.com/wp-content/uploads/2021/09/streetlifting-4-1.png?fit=1024%2C1024&ssl=1" 
+        alt="" 
+        id="imagen">
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $("#imagen").attr("src", "https://i0.wp.com/streetliftingacademy.com/wp-content/uploads/2021/09/streetlifting-entrenamiento-nutricion-1-1.jpg?fit=1024%2C1024&ssl=1");
+            });
+        });
+    </script> -->
+    <!--Ejercicio18-->
+    <!-- <ol>
+        <li class="producto">producto 1</li>
+        <li class="producta">producto 2</li>
+        <li class="producto">producto 3</li>
+        <li class="producto">producto 4</li>
+    </ol>
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $(".producto").attr("data-id", "ensaladas");
+            });
+        });
+    </script> -->
+    <!--Ejercicio19-->
+    <!-- <input type="text" id="nombre" value="Migue">
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $("#nombre").val("Juan Pérez");
+            });
+        });
+    </script> -->
+    <!--Ejercicio20-->
+    <!-- <script>
+        $(document).ready(()=>{
+            $(document).on("click", ()=>{
+                $("title[id=firstTitle]").remove();
+                $("head").append("<title>Página web interactiva</title>");
+            });
+        });
+    </script> -->
+</body>
+</html>
